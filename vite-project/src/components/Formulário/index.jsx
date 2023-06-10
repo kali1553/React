@@ -1,7 +1,7 @@
 import Campo from "../campoTexto"
 import Categoria from "../Lista"
-
 import '../../styles/Formulario.css'
+
 const Formulario = () => {
     
     const categoria = [
