@@ -1,12 +1,10 @@
+import { useState } from 'react'
 import '../../styles/CampoTexto.css'
 
 function Campo(props) {
-  
-  let valor = 'Pedro Henrique'
-
+    
   const aoDigitar = (evento) => {
-      valor = evento.target.value
-      console.loge(valor)
+    props.aoAlterado(evento.target.value)
   }
 
   return(
@@ -16,7 +14,7 @@ function Campo(props) {
           <label>
             {props.label}
           </label>
-          <input value={valor} onChange={aoDigitar} placeholder={`${props.placeholder}...`}/>
+          <input value={props.valor} onChange={aoDigitar} placeholder={`${props.placeholder}...`}/>
       </form>    
     </div> 
     </>
