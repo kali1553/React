@@ -3,7 +3,7 @@ import '../../styles/botao.css'
 const criarCard = (props) => {
     return (
         <button className='criarCard'>
-            {props.texto}
+            {props.texto} 
         </button>
     )
 }

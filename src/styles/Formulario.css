@@ -1,15 +1,15 @@
 .formulario {
     display: flex;
     justify-content: center;
-    margin: 80px;
+    margin: 80px 25%;
+    width: 50%;
 }
 
 .formulario form {
     max-width: 90%;
     background-color: #f2f2f2;
-    border-radius: 20px;
     padding: 36px 64px;
-    width: 80%;
+    width: 70%;
 }
 
 .formulario h2 {
@@ -19,7 +19,6 @@
 .formulario button {
     font-size: 20px;
     padding: 20px 30px;
-    border-radius: 10px;
     border: none;
     background-color: rgb(112, 0, 218);
     color: #f2f2f2;
