@@ -4,7 +4,7 @@ import CriarCard from "../criarCard"
 import '../../styles/Formulario.css'
 import { useState } from "react"
 
-const Formulario = () => {
+const Formulario = (props) => {
 
     const categoria = [
         'Aventura',
@@ -18,7 +18,11 @@ const Formulario = () => {
 
     const aoSalvar = (evento) => {
         evento.preventDefault()
-        console.log("Form foi submetido", nome, imagem, categorias)
+        props.aoNovoGame({
+            nome: nome,
+            imagem: imagem,
+            categoria: categoria
+        })
     }
     
     return (
