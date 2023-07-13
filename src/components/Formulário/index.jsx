@@ -6,11 +6,7 @@ import { useState } from "react"
 
 const Formulario = (props) => {
 
-    const categoria = [
-        'Aventura',
-        'Suspense',
-        'Ação'
-    ]
+    
 
     const [nome, setNome] = useState('')
     const [imagem, setImagem] = useState('')
@@ -42,7 +38,7 @@ const Formulario = (props) => {
                     aoAlterado={valor => setImagem(valor)}
                 />
                 <Categoria
-                    itens={categoria}
+                    itens={props.games}
                     label="Categoria do game"
                     valor={categorias}
                     aoAlterado={valor => setCategorias(valor)}

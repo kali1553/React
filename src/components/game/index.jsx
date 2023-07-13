@@ -1,10 +1,12 @@
+import Criar from '../criarGame'
 import './game.css'
 
 
 const Game = (props) => {
     return( 
-        <section className='game'>
-            <h3>{props.nome}</h3>
+        <section className='game' style={{backgroundColor: props.corSecundaria}}>
+            <h3 style={{borderColor: props.corPrimaria}}>{props.nome}</h3>
+            <Criar />
         </section>
     )
 }
