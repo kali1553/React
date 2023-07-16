@@ -17,7 +17,7 @@ const Formulario = (props) => {
         props.aoNovoGame({
             nome: nome,
             imagem: imagem,
-            categoria: categoria
+            categoria: categorias
         })
     }
     

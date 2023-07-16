@@ -29,13 +29,21 @@ export default function App() {
   
   const aoNovoGame = (Game) => {
     console.log(Game)
+    setNovo([...novoGame, Game])
   }
 
   return (
     <div>
       <Banner/>
       <Formulario games={games.map(games => games.nome)} aoNovoGame={Game => aoNovoGame(Game)}/>
-       {games.map( games => <Game key={games.nome} nome={games.nome} corPrimaria={games.corPrimaria} corSecundaria={games.corSecundaria}/>)}
+
+       {games.map( games => <Game 
+       key={games.nome} 
+       nome={games.nome} 
+       corPrimaria={games.corPrimaria} 
+       corSecundaria={games.corSecundaria}
+       novoGame = {novoGame}
+       />)}
     </div>
     
   )
