@@ -26,24 +26,25 @@ export default function App() {
 ]
 
   const [novoGame, setNovo] = useState([])
-  
-  const aoNovoGame = (Game) => {
-    console.log(Game)
-    setNovo([...novoGame, Game])
+  debugger
+  const aoGameAdicionado= (jogo) => {
+    console.log(jogo)
+    setNovo([...novoGame, jogo])
+
   }
 
   return (
     <div>
-      <Banner/>
-      <Formulario games={games.map(games => games.nome)} aoNovoGame={Game => aoNovoGame(Game)}/>
+      <Banner/> 
+      <Formulario games={games.map(games => games.nome)} aoNovoGame={jogo => aoGameAdicionado(jogo)}/>
 
-       {games.map( games => <Game 
+      {games.map( games => <Game 
        key={games.nome} 
        nome={games.nome} 
        corPrimaria={games.corPrimaria} 
        corSecundaria={games.corSecundaria}
-       novoGame = {novoGame}
-       />)}
+       novoGame={novoGame.filter(jogo => jogo.categoria === games.nome)}
+      />)}
     </div>
     
   )

@@ -1,14 +1,14 @@
 import './criarGame.css'
 import R6 from '../images/download.png'
 
-const Criar = (props) => {
+const Criar = ({nome, imagem, categoria, corDeFundo}) => {
     return(<div className='criar'>
-        <div className='cabecalho'>
-            <img src={props.imagem} />
+        <div className='    cabecalho' style={{backgroundColor: corDeFundo}}>
+            <img src={imagem} />
         </div>
         <div className='rodape'>        
-            <h4 > {props.nome}</h4>
-            <h5> {props.categoria} </h5>
+            <h4> {nome} </h4>
+            <h5> {categoria} </h5>
         </div>
     </div>
 

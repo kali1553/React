@@ -4,10 +4,13 @@ import './game.css'
 
 const Game = (props) => {
     return( 
-        <section className='game' style={{backgroundColor: props.corSecundaria}}>
+        props.novoGame.length > 0 ? <section className='game' style={{backgroundColor: props.corSecundaria}}>
             <h3 style={{borderColor: props.corPrimaria}}>{props.nome}</h3>
-            {props.novoGame.map(novoGame => <Criar nome={novoGame.nome} categoria={novoGame.categoria} imagem={novoGame.imagem}/>)} 
+            <div className='Games'>
+                {props.novoGame.map(jogo => <Criar corDeFundo={props.corPrimaria} key={jogo.nome} nome={jogo.nome} categoria={jogo.categoria} imagem={jogo.imagem}/>)} 
+            </div>
         </section>
+        : ''
     )
 }
 
