@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import '../../styles/CampoTexto.css'
 
 function Campo(props) {
